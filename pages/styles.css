@@ -1,0 +1,298 @@
+:root {
+  --ink: #1b1c1a;
+  --muted: #6b6d68;
+  --bg: #faf8f4;
+  --paper: #ffffff;
+  --teal: #2f7d72;
+  --teal-dark: #235f57;
+  --amber: #e0a23b;
+  --line: #e9e5dd;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.font-display {
+  font-family: "Fraunces", Georgia, serif;
+}
+.text-muted {
+  color: var(--muted);
+}
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.availability-badge--available {
+  color: #1f442f;
+  background: #dff3ea;
+}
+.availability-badge--full {
+  color: #7b2828;
+  background: #fbe6e6;
+}
+.availability-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+.availability-progress__track {
+  flex: 1;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: rgba(47, 125, 114, 0.12);
+  overflow: hidden;
+}
+.availability-progress__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--teal);
+  width: 0%;
+  transition: width 0.5s ease;
+}
+.availability-progress__percent {
+  white-space: nowrap;
+}
+.bg-teal {
+  background: var(--teal);
+}
+.text-teal {
+  color: var(--teal);
+}
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 0;
+  background: var(--ink);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+#nav.scrolled {
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--extralight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-wght--extrabold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--blackitalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--thinitalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--extralight.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--extralightitalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--light.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--lightitalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--italic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--medium.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--mediumitalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--semibold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--semibolditalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--bolditalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--extrabold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--extrabolditalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-soft-wonk-opsz-wght--black.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
